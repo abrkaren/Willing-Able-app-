@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Successful</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="success-message">
+    <i class="fa fa-check-circle"></i>
+    <h1 class="success-message-title">Successful Registration</h1>
+    <div class="success-message-content">
+        <p>Congratulations, your account has been successfully created.</p>
+        <a id="success-btn">Login</a>
+    </div>
+  </div>
+
+<script type="text/javascript">
+    document.getElementById("success-btn").onclick = function () {
+    
+        localStorage.setItem('api-header', JSON.stringify({
+            'step1Form': JSON.parse(localStorage.getItem('step1Form')),
+            'step2Form': JSON.parse(localStorage.getItem('step2Form')),
+            'step3Form': JSON.parse(localStorage.getItem('step3Form'))
+        }))
+
+        localStorage.removeItem('step1Form');
+        localStorage.removeItem('step2Form');
+        localStorage.removeItem('step3Form');
+        localStorage.removeItem('isValidPostalCode');
+        localStorage.removeItem('step1FormConfirmed');
+        localStorage.removeItem('step2FormConfirmed');
+        localStorage.removeItem('step3FormConfirmed');
+        localStorage.removeItem('isUseFilledDataForShipping');
+        localStorage.removeItem('isValidShippingPostalCode');
+        
+        location.href = "../index.html";
+    };
+</script>
+</body>
+</html>

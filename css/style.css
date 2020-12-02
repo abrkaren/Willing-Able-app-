@@ -1,0 +1,253 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+@font-face {
+  font-family: "Montserratarm-Light";
+  src: url("../assets/fonts/Monserat/Montserratarm-Light.otf")
+}
+
+@font-face {
+  font-family: "Montserratarm-Medium";
+  src: url("../assets/fonts/Monserat/Montserratarm-Medium.otf")
+}
+
+body {
+	font-family: "Montserratarm-Light";
+    font-size: 14px;
+    background: #f2f2f2;
+}
+
+/* ----------- GLOBAL STYLES START ----------- */
+
+.form-wrapper {
+    background: #fff;
+    width: 400px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 40px auto;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper .form-title {
+	  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    color: #999999;
+}
+
+.form-wrapper input[type="text"], 
+.form-wrapper input[type="email"], 
+.form-wrapper input[type="password"],
+.form-wrapper input[type="tel"],
+.form-wrapper input[type="date"],
+.form-wrapper select {
+	width: 100%;
+    padding: 8px 10px;
+    height: 35px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.30s ease-in-out;
+}
+
+.form-wrapper input[type="text"]:hover, 
+.form-wrapper input[type="email"]:hover, 
+.form-wrapper input[type="password"]:hover,
+.form-wrapper input[type="tel"]:hover,
+.form-wrapper input[type="date"]:hover,
+.form-wrapper select:hover {
+	background: #fafafa;
+}
+
+.form-wrapper input[type="submit"], .form-wrapper input[type="button"] {
+	background: #33adff;
+    height: 35px;
+    line-height: 35px;
+    width: 80px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    transition: all 0.30s ease-in-out;
+    border-radius: 4px;
+}
+.form-wrapper input[type="submit"]:hover, .form-wrapper input[type="button"]:hover {
+    background: #0099ff;
+}
+
+.form-wrapper .checkbox-option {
+	display: flex;
+    align-items: center;
+}
+
+.form-wrapper .checkbox-option label{
+	margin-left: 8px;
+}
+
+.form-wrapper .form-control {
+    margin-bottom: 20px;
+}
+
+.form-wrapper .form-title h2 {
+	margin-bottom: 4px;
+}
+
+.form-wrapper .form-title i {
+	font-size: 30px;
+}
+
+.border-box {
+    border-left: 3px solid #80ccff;
+    border-top: 2px solid #80ccff;
+    border-right: 1px solid #80ccff;
+    border-bottom: 4px solid #80ccff;
+}
+
+.error {
+    border-color: rgb(235, 110, 96)!important;
+}
+
+/* ----------- GLOBAL STYLES END ----------- */
+
+
+/* ----------- STEP 1 STYLES START ----------- */
+
+.form-wrapper #form-step1 {
+	padding: 25px;
+	background-color: #d2d2d2;
+}
+
+/* ----------- STEP 1 STYLES END ----------- */
+
+/* ----------- STEP 2 STYLES START ----------- */
+
+.form-wrapper #form-step2 {
+    padding: 25px;
+    background-color: #d2d2d2;
+}
+
+.form-wrapper #form-step2 .checkbox-option input {
+    opacity: 0;
+}
+
+.form-wrapper #form-step2 .checkbox-option span{
+    position: relative;
+    display: inline-block;
+    margin-left: -25px;
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #666666;
+}
+
+.form-wrapper #form-step2 .checkbox-option:hover span{
+    border-color: #33adff;
+}
+
+.form-wrapper #form-step2 .cb-error span{
+    border: 1px solid red!important;
+}
+
+.form-wrapper #form-step2 .cb-error label {
+    color: red;
+}
+
+.form-wrapper #form-step2 .checkbox-option span:before{
+    content: "\2713";  comment content to use custom icon classes 
+    position: absolute;
+    top: 0; left: 0;  right: 0; bottom: 0;
+    opacity: 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    color: #33adff;
+}
+
+.form-wrapper #form-step2 .checkbox-option input[type=checkbox]:checked + span{
+    border-color: #33adff;
+    background-color: #33adff;
+}
+
+.form-wrapper #form-step2 .checkbox-option input[type=checkbox]:checked + span:before{
+    color: #fff;
+    opacity: 1;
+    transition: color .3 ease-out;
+}
+
+.form-wrapper #form-step2 .checkbox-option input[type=checkbox]:disabled + span{
+    border-color: #ddd !important;
+    background-color: #ddd !important;
+}
+
+/* ----------- STEP 2 STYLES END ----------- */
+
+
+/* ----------- STEP 3 STYLES START ----------- */
+
+.form-wrapper #form-step3 {
+    padding: 25px;
+    background-color: #d2d2d2;
+}
+
+/* ----------- STEP 3 STYLES END ----------- */
+
+
+/* ----------- AUTH (index.html) STYLES START ----------- */
+
+.auth-page .register a {
+    color: #33adff;
+}
+
+/* ----------- AUTH (index.html) STYLES END ----------- */
+
+/* ----------- SUCCESSFUL (register-successful.html) STYLES START ----------- */
+
+.success-message {
+    background: #fff;
+    width: 400px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 120px auto;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+}
+
+.success-message .fa-check-circle {
+    color: #3DC480;
+    font-size: 100px;
+}
+
+.success-message .success-message-title {
+    color: #3DC480;
+}
+
+.success-message .success-message-content {
+    color: #B8BABB;
+    margin-top: 20px;
+}
+
+.success-message .success-message-content p {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid lightgray;
+    
+}
+
+.success-message .success-message-content a {
+    color: #3DC480;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* ----------- SUCCESSFUL (register-successful.html) STYLES END ----------- */

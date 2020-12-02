@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Step 3</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="../js/step3.js"></script>
+</head>
+<body>
+
+	<div class="register-page">
+		<div class="form-wrapper">
+			<div class="border-box" id="form-container-step3">
+				<div class="form-title">
+					<div class="title">
+						<h2>Step 3/3</h2>
+			            <b>Fill your credit card details</b>
+					</div>
+ 					<div class="icon">
+ 						<i class="fa fa-credit-card"></i>
+ 					</div>
+			    </div>
+				<form id="form-step3" onsubmit="return submitStep3Form()">
+
+					    <div class="form-control">
+					    	<input class="cc-number" id="cardNumber" maxlength="19" name="credit-number" placeholder="Card Number" type="tel" onkeydown="checkCardNumber()"  onkeyup="checkCardNumber(event)"/>
+					    </div>
+					    <div class="form-control">
+					    	<input type='text' id="fullName" placeholder="Full name ..." onkeyup="requiredField(this, 'cc-fullName')" />
+						</div>
+
+						<div class="form-control">
+					    	<input class="cc-cvc" id="ccCvc" maxlength="4" name="credit-cvc" placeholder="CVC" type="tel" onkeyup="requiredField(this, 'cc-cvc')" />
+						</div>
+
+						<div class="form-control">
+					    	<input class="cc-expires" id="ccExpires" name="credit-expires" placeholder="DD / MM / YY" type="date" onchange="requiredField(this, 'cc-expires')" />
+						</div>
+						<div class="form-control">
+							<input class="button" type="button" value="Previos" id="previos" onclick="goBackStep2Page()" />
+							<input class="button" type="submit" value="Next"/>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

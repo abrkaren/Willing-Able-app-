@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Step 2</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="../js/step2.js"></script>
+</head>
+<body>
+
+	<div class="register-page">
+		<div class="form-wrapper">
+			<div class="border-box" id="form-container-step2">
+				<div class="form-title">
+					<div class="title">
+						<h2>Step 2/3</h2>
+			            <b>Choose a package</b>
+					</div>
+ 					<div class="icon">
+ 						<i class="fa fa-gift"></i>
+ 					</div>
+			    </div>
+				<form id="form-step2" onsubmit="return submitStep2Form()">
+					<div class="form-control">
+					    <input type='email' placeholder="Email..." id="email"  onkeyup="requiredField(this, 'email')" />
+					</div>
+					<div class="form-control">
+					    <input type='password' placeholder="Password..." id="password" onkeyup="requiredField(this, 'password')" />
+					</div>
+					<div class="form-control">
+					    <input type='password' placeholder="Repeat Password..." id="rePassword" onkeyup="requiredField(this, 'rePassword')" />
+					</div>
+
+					<div class="form-control checkbox-option" id="cb2-error-handler">
+						<label for="cb2">
+					    <input type='checkbox' id="cb2" />
+					    <span></span>
+					    Standart Package</label>
+					</div>
+
+					<div class="form-control checkbox-option" id="cb3-error-handler">
+						<label for="cb3">
+					    <input type='checkbox' id="cb3" />
+					    <span></span>
+					    Premium Package</label>
+					</div>
+
+					<div class="form-control">
+						<input class="button" type="button" value="Previos" id="previos" onclick="goBackStep1Page()" />
+						<input class="button" type="submit" value="Next"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

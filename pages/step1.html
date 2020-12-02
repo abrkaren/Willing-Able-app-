@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Step 1</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="../json/data.json"></script> 
+	<script type="text/javascript" src="../js/step1.js"></script>
+</head>
+<body>
+
+	<div class="register-page">
+		<div class="form-wrapper">
+			<div class="border-box" id="form-container-step1">
+				<div class="form-title">
+					<div class="title">
+						<h2>Step 1/3</h2>
+			            <b>Tell us who you are</b>
+					</div>
+ 					<div class="icon">
+ 						<i class="fa fa-user"></i>
+ 					</div>
+			    </div>
+				<form id="form-step1" onsubmit="return submitStep1Form()">
+					<div class="form-control">
+					    <input type='text' placeholder="First name..." id="firstName" onkeyup="requiredField(this)" />
+					</div>
+					<div class="form-control">
+					    <input type='text' placeholder="Last name..." id="lastName" onkeyup="requiredField(this)" />
+					</div>
+					<div class="form-control">
+					    <select id="country" name="country" id="country" class="formControlName" onchange="onChangeFields(this.value, 'country'); requiredField(this)">
+					    	<option value="">Choose your country</option>
+					    </select>
+					</div>
+					<div class="form-control">
+					    <input type='text' placeholder="City..." id="city" class="formControlName" onkeyup="onChangeFields(this.value, 'city'); requiredField(this)" />
+					</div>
+					<div class="form-control">
+					    <input type='text' placeholder="Address..." id="address" class="formControlName" onkeyup="onChangeFields(this.value, 'address'); requiredField(this)" />
+					</div>
+					<div class="form-control">
+					    <input type='text' placeholder="Postal Code..." id="postalCode" class="formControlName" onkeyup="onChangeFields(this.value, 'postalCode'); requiredField(this, 'postalCode')" />
+					</div>
+					<div class="form-control checkbox-option">
+					    <input type='checkbox' id="cb1" onclick="useFilledDataForShipping(this)" />
+					    <label for="cb1">Use filled data for shipping</label>
+					</div>
+					<div class="form-control">
+					    <select id="shippingCountry" name="shippingCountry" id="shippingCountry" onchange="requiredField(this)">
+					    	<option value="">Choose your country</option>
+					    </select>
+					</div>
+					<div class="form-control">
+					    <input type='text' placeholder="Shipping city..." id="shippingCity" onkeyup="requiredField(this)" />
+					</div>
+					<div class="form-control">
+					    <input type='text' placeholder="Shipping address..." id="shippingAddress" onkeyup="requiredField(this)" />
+					</div>
+					<div class="form-control">
+					    <input type='text' placeholder="Shipping Postal Code..." id="shippingPostalCode" onkeyup="requiredField(this, 'shippingPostalCode')" />
+					</div>
+					<div class="form-control">
+						<input class="button" type="submit" value="Next"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

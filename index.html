@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auth Page</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="./js/auth.js"></script>
+</head>
+<body>
+
+	<div class="auth-page">
+		<div class="form-wrapper">
+			<div class="border-box" id="form-container">
+				<div class="form-title">
+					<div class="title">
+						<h2>SIGN IN</h2>
+					</div>
+ 					<div class="icon">
+ 						<i class="fa fa-sign-in"></i>
+ 					</div>
+			    </div>
+				<form id="form-step1" onsubmit="return submitLoginForm()">
+					<div class="form-control">
+					    <input type='email' placeholder="Email..." id="email"  onkeyup="requiredField(this, 'email')" />
+					</div>
+					<div class="form-control">
+					    <input type='password' placeholder="Password..." id="password" onkeyup="requiredField(this, 'password')" />
+					</div>
+					<div class="form-control">
+						<input class="button" type="submit" value="Login"/>
+					</div>
+					<div class="register">
+						<p class="signup">
+		             		 Don't have an account ?
+		              		<a href="./pages/step1.html">Sign up.</a>
+		            	</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
